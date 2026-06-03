@@ -70,7 +70,8 @@
 
 .sa-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sa-line);border:1px solid var(--sa-line);border-radius:var(--sa-r);overflow:hidden;max-width:920px;margin:0 auto;box-shadow:0 30px 60px -40px rgba(23,19,16,.35)}
 .sa-stats .sa-s{background:#fff;padding:28px 18px 22px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:10px;min-height:128px}
-.sa-stats .sa-s b{font-weight:900;font-size:clamp(24px,2.6vw,30px);display:flex;align-items:baseline;justify-content:center;gap:.18em;letter-spacing:-.02em;line-height:1;white-space:nowrap;min-height:34px}
+.sa-stats .sa-s b{font-weight:900;font-size:28px;line-height:1;letter-spacing:-.02em;white-space:nowrap;min-height:34px;display:block;text-align:center;font-variant-numeric:tabular-nums}
+.sa-stats .sa-s b .sa-count{font:inherit;font-size:inherit;letter-spacing:inherit}
 .sa-stats .sa-s span{font-size:13px;line-height:1.35;color:var(--sa-dim-2);max-width:22ch;margin-top:auto}
 @media(max-width:680px){.sa-stats{grid-template-columns:repeat(2,1fr)}.sa-stats .sa-s{min-height:112px}}
 
