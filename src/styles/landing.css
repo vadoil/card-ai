@@ -276,8 +276,8 @@
 .sa-fcol a:hover{color:var(--sa-ink)}
 .sa-fbottom{border-top:1px solid var(--sa-line);padding-top:24px;color:var(--sa-dim-2);font-size:13px;text-align:center}
 
-.sa-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.sa-reveal.sa-in{opacity:1;transform:none}
+.sa-root.sa-js .sa-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.sa-root.sa-js .sa-reveal.sa-in{opacity:1;transform:none}
 
 @media(prefers-reduced-motion:reduce){
   .sa-mq-row{animation:none!important}
