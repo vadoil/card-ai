@@ -85,32 +85,41 @@ function MiniCard({ d, big = false }: { d: Card; big?: boolean }) {
 // ---------- hooks ----------
 function useReveal() {
   useEffect(() => {
+    const root = document.querySelector<HTMLElement>(".sa-root");
+    if (root) root.classList.add("sa-js");
     const els = Array.from(document.querySelectorAll<HTMLElement>(".sa-reveal"));
     els.forEach((el, i) => {
       el.style.transitionDelay = `${Math.min(i, 6) * 0.05}s`;
     });
+    const reveal = (el: Element) => {
+      el.classList.add("sa-in");
+      el.querySelectorAll<HTMLElement>(".sa-count:not(.sa-done)").forEach((c) => {
+        c.classList.add("sa-done");
+        runCount(c);
+      });
+    };
     if (typeof IntersectionObserver === "undefined") {
-      els.forEach((el) => el.classList.add("sa-in"));
+      els.forEach(reveal);
       return;
     }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add("sa-in");
-            // trigger counters inside
-            e.target.querySelectorAll<HTMLElement>(".sa-count:not(.sa-done)").forEach((c) => {
-              c.classList.add("sa-done");
-              runCount(c);
-            });
+            reveal(e.target);
             io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12, rootMargin: "0px 0px -5% 0px" }
     );
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    // Safety: if observer never fires (e.g. layout in a non-scrolling container), force reveal.
+    const safety = window.setTimeout(() => els.forEach(reveal), 1200);
+    return () => {
+      io.disconnect();
+      window.clearTimeout(safety);
+    };
   }, []);
 }
 
