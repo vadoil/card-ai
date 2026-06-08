@@ -203,7 +203,7 @@ function LandingPage() {
   const [cards, setCards] = useState(20);
   const [price, setPrice] = useState(2000);
   const designer = cards * price;
-  const saved = Math.max(0, designer - 990);
+  const saved = Math.max(0, designer - 1990);
 
   const mqA = useMemo(() => [...CARDS, ...CARDS], []);
   const mqB = useMemo(() => {
