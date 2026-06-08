@@ -62,27 +62,7 @@
 @media(max-width:920px){.sa-nav-links{display:none}.sa-nav-cta .sa-login{display:none}}
 
 .sa-hero{padding:96px 0 64px;text-align:center;position:relative}
-.sa-hero-fx{position:absolute;left:50%;top:510px;transform:translateX(-50%);width:min(1100px,94%);height:320px;z-index:0;pointer-events:none;mask-image:radial-gradient(ellipse 70% 80% at 50% 55%,#000 40%,transparent 90%);-webkit-mask-image:radial-gradient(ellipse 70% 80% at 50% 55%,#000 40%,transparent 90%)}
-.sa-hero-fx .sa-hero-grid{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
-.sa-hero-glow{position:absolute;left:50%;top:140px;transform:translate(-50%,-50%);width:720px;height:300px;background:radial-gradient(closest-side,rgba(217,70,239,.2),rgba(162,28,175,.08) 45%,transparent 75%);filter:blur(24px);animation:saHeroPulse 10s ease-in-out infinite}
-
-
-@keyframes saHeroPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.05)}}
-
-@keyframes saBarUp{to{y:calc(500px - var(--h));height:var(--h)}}
-.sa-hero-fx .sa-bars rect{transform-box:fill-box}
-.sa-hero-fx .sa-area{opacity:0;animation:saAreaIn 2.6s ease-out 1s forwards}
-@keyframes saAreaIn{to{opacity:1}}
-.sa-hero-fx .sa-trend{stroke-dasharray:2400;stroke-dashoffset:2400;animation:saTrendDraw 4.2s cubic-bezier(.22,.61,.36,1) .4s forwards, saTrendGlow 6s ease-in-out 4.6s infinite}
-@keyframes saTrendDraw{to{stroke-dashoffset:0}}
-@keyframes saTrendGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(217,70,239,0))}50%{filter:drop-shadow(0 4px 16px rgba(217,70,239,.55))}}
-.sa-hero-fx .sa-dot-trail{filter:drop-shadow(0 0 12px rgba(217,70,239,.85))}
-.sa-hero-fx .sa-spark{animation:saSpark 4s ease-in-out infinite;opacity:0}
-@keyframes saSpark{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:.9;transform:scale(1.15) rotate(45deg)}}
-
 .sa-hero > .sa-container{position:relative;z-index:1}
-@media(max-width:680px){.sa-hero-fx{opacity:.55}}
-@media(prefers-reduced-motion:reduce){.sa-hero-fx *{animation:none!important}.sa-hero-fx .sa-trend{stroke-dashoffset:0}.sa-hero-fx .sa-bars rect{y:200px;height:300px}}
 
 
 .sa-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sa-accent);background:rgba(217,70,239,.08);border:1px solid rgba(217,70,239,.2);padding:8px 16px;border-radius:999px;margin-bottom:28px;line-height:1}
