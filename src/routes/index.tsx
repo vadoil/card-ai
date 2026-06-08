@@ -258,7 +258,7 @@ function LandingPage() {
               <g className="sa-bars">
                 {[80,180,280,380,480,580,680,780,880,980,1080].map((x,i)=>(
                   <rect key={i} x={x} y={500} width="44" height="0" rx="6" fill="url(#saBar)"
-                    style={{animation:`saBarUp 2.4s cubic-bezier(.2,.7,.2,1) ${i*0.12}s forwards`, ['--h' as any]:`${60+i*22}px`}} />
+                    style={{animation:`saBarUp 3.4s cubic-bezier(.22,.61,.36,1) ${0.3 + i*0.18}s forwards`, ['--h' as any]:`${60+i*22}px`}} />
                 ))}
               </g>
               {/* area + line */}
@@ -267,9 +267,10 @@ function LandingPage() {
                 fill="none" stroke="url(#saLine)" strokeWidth="3.5" strokeLinecap="round" />
               {/* moving dot */}
               <circle className="sa-dot-trail" r="7" fill="#d946ef">
-                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"
+                <animateMotion dur="11s" repeatCount="indefinite" rotate="auto" calcMode="spline" keyTimes="0;1" keySplines="0.42 0 0.58 1"
                   path="M0 500 C 150 480, 250 460, 350 430 S 600 360, 750 300 S 1000 200, 1200 120" />
               </circle>
+
               {/* sparkles */}
               {[[200,180],[420,260],[640,200],[860,140],[1040,80]].map(([x,y],i)=>(
                 <g key={i} className="sa-spark" style={{animationDelay:`${i*0.7}s`,transformOrigin:`${x}px ${y}px`}}>
