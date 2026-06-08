@@ -36,9 +36,9 @@
 @keyframes sa-shine{to{background-position:200% center}}
 
 .sa-bg-fx{position:fixed;inset:0;z-index:0;pointer-events:none}
-.sa-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;transition:transform .3s ease-out}
-.sa-blob.a{width:520px;height:520px;background:radial-gradient(circle,rgba(255,90,31,.22),transparent 70%);top:-160px;left:-80px}
-.sa-blob.b{width:460px;height:460px;background:radial-gradient(circle,rgba(255,45,104,.16),transparent 70%);top:120px;right:-120px}
+.sa-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;transition:transform .3s ease-out}
+.sa-blob.a{width:560px;height:560px;background:radial-gradient(circle,rgba(255,90,31,.28),transparent 70%);top:-180px;left:-100px}
+.sa-blob.b{width:480px;height:480px;background:radial-gradient(circle,rgba(255,45,104,.22),transparent 70%);top:140px;right:-140px}
 .sa-wrap{position:relative;z-index:2}
 
 .sa-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sa-f);font-weight:700;font-size:16px;border-radius:999px;padding:15px 26px;cursor:pointer;border:1.5px solid transparent;transition:.25s;white-space:nowrap;position:relative;overflow:hidden}
