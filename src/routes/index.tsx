@@ -810,10 +810,8 @@ function LandingPage() {
                   </div>
                   <div className="sa-bs">
                     <b>
-                      &lt;{" "}
-                      <span className="sa-count" data-target="5">
-                        0
-                      </span>
+                      <span className="sa-lt">до</span>{" "}
+                      <span className="sa-count" data-target="5">5</span>
                     </b>
                     <span>минут на карточку</span>
                   </div>
