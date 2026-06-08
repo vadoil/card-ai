@@ -809,8 +809,7 @@ function LandingPage() {
                     <span>довольны результатом</span>
                   </div>
                   <div className="sa-bs">
-                    <b style={{ whiteSpace: "nowrap" }}>
-                      <span className="sa-lt">до</span>{"\u00A0"}
+                    <b>
                       <span className="sa-count" data-target="5">5</span>
                     </b>
                     <span>минут на карточку</span>
