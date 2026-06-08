@@ -899,47 +899,54 @@ function LandingPage() {
                 <a href="#" className="sa-btn sa-btn-ghost">Начать</a>
               </div>
               <div className="sa-plan sa-reveal">
-                <h3>Старт</h3>
-                <div className="sa-price">490<small> ₽/мес</small></div>
+                <h3>Бейсик</h3>
+                <div className="sa-price">1 990<small> ₽/мес</small></div>
                 <div className="sa-ptag">для первых продаж</div>
                 <ul>
-                  <li><span className="sa-ck">✓</span>До 20 карточек в месяц</li>
+                  <li><span className="sa-ck">✓</span>До 30 карточек в месяц</li>
                   <li><span className="sa-ck">✓</span>Премиум-инфографика</li>
                   <li><span className="sa-ck">✓</span>Продающие тексты и УТП</li>
+                  <li><span className="sa-ck">✓</span>SEO-описание под WB / Ozon</li>
                 </ul>
                 <a href="#" className="sa-btn sa-btn-ghost">Выбрать</a>
               </div>
-              <div className="sa-plan sa-best sa-reveal">
-                <span className="sa-ribbon">Популярный</span>
-                <h3>Про</h3>
-                <div className="sa-price">990<small> ₽/мес</small></div>
+              <div className="sa-plan sa-reveal">
+                <h3>Стандарт</h3>
+                <div className="sa-price">2 990<small> ₽/мес</small></div>
                 <div className="sa-ptag">для роста магазина</div>
                 <ul>
-                  <li><span className="sa-ck">✓</span>До 20 карточек в месяц</li>
-                  <li><span className="sa-ck">✓</span>Все типы: мем / элит / модель</li>
-                  <li><span className="sa-ck">✓</span>4 варианта на тест</li>
-                  <li><span className="sa-ck">✓</span>До 3 видео-карточек</li>
-                </ul>
-                <a href="#" className="sa-btn sa-btn-primary">Выбрать</a>
-              </div>
-              <div className="sa-plan sa-reveal">
-                <h3>Премиум</h3>
-                <div className="sa-price">1 990<small> ₽/мес</small></div>
-                <div className="sa-ptag">для потока товаров</div>
-                <ul>
                   <li><span className="sa-ck">✓</span>До 100 карточек в месяц</li>
-                  <li><span className="sa-ck">✓</span>10 видео-карточек</li>
+                  <li><span className="sa-ck">✓</span>Все типы: мем / элит / инфографика</li>
+                  <li><span className="sa-ck">✓</span>4 варианта на A/B-тест</li>
+                  <li><span className="sa-ck">✓</span>До 5 видео-карточек</li>
                   <li><span className="sa-ck">✓</span>Приоритетная генерация</li>
                 </ul>
                 <a href="#" className="sa-btn sa-btn-ghost">Выбрать</a>
               </div>
+              <div className="sa-plan sa-best sa-reveal">
+                <span className="sa-ribbon">Топ</span>
+                <h3>Топ</h3>
+                <div className="sa-price">4 990<small> ₽/мес</small></div>
+                <div className="sa-ptag">всё для выручки в топ-1</div>
+                <ul>
+                  <li><span className="sa-ck">✓</span>Всё из Стандарта</li>
+                  <li><span className="sa-ck">✓</span><b>Примерка на AI-моделях</b></li>
+                  <li><span className="sa-ck">✓</span><b>Анализ ниши</b> и конкурентов по API</li>
+                  <li><span className="sa-ck">✓</span><b>Контент-план</b> для карточек под нишу</li>
+                  <li><span className="sa-ck">✓</span>Текущие и будущие <b>акции</b> WB / Ozon / Я.Маркет — в каких участвовать</li>
+                  <li><span className="sa-ck">✓</span>Сценарий «как сделать топ выручки» — что улучшить в карточке</li>
+                  <li><span className="sa-ck">✓</span>До <b>50 000</b> карточек в месяц по всем маркетплейсам</li>
+                  <li><span className="sa-ck">✓</span>API-интеграция отдельно с WB · Ozon · Я.Маркет · Мегамаркет</li>
+                </ul>
+                <a href="#" className="sa-btn sa-btn-primary">Выбрать Топ</a>
+              </div>
             </div>
             <div className="sa-corp sa-reveal">
               <div className="sa-ct">
-                <h3>Корпоративный — 4 990 ₽/мес</h3>
-                <p>Безлимит карточек, расширенное видео и поддержка для агентств и крупных магазинов.</p>
+                <h3>Конструктор · Публикатор · Анализатор — отдельный тариф</h3>
+                <p>Визуальный конструктор карточек, автопубликация на маркетплейсы и сквозная аналитика продаж. Сейчас в демо — попробуйте интерфейс уже сегодня.</p>
               </div>
-              <a href="#" className="sa-btn sa-btn-ghost">Обсудить</a>
+              <Link to="/studio" className="sa-btn sa-btn-ghost">Открыть демо →</Link>
             </div>
           </div>
         </section>
