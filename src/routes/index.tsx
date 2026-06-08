@@ -303,41 +303,23 @@ function LandingPage() {
 
             <div className="sa-stats sa-reveal">
               <div className="sa-s">
-                <b>
-                  <span className="sa-count" data-target="47" data-suffix="%">
-                    0
-                  </span>
-                </b>
-                <span>средний рост CTR</span>
+                <b>4 варианта</b>
+                <span>инфо · мем · элит · модель</span>
               </div>
               <div className="sa-s">
-                <b>
-                  <span className="sa-count" data-target="10000" data-suffix="+">
-                    0
-                  </span>
-                </b>
-                <span>карточек создано</span>
+                <b>1 клик</b>
+                <span>удаление фона и сборка</span>
               </div>
               <div className="sa-s">
-                <b>
-                  &lt;{" "}
-                  <span className="sa-count" data-target="5">
-                    0
-                  </span>{" "}
-                  мин
-                </b>
-                <span>одна карточка</span>
+                <b>AI-тексты</b>
+                <span>заголовки, УТП, описание</span>
               </div>
               <div className="sa-s">
-                <b>
-                  <span className="sa-count" data-target="4">
-                    0
-                  </span>{" "}
-                  площадки
-                </b>
-                <span>нужные размеры</span>
+                <b>4 площадки</b>
+                <span>WB · Ozon · ЯМ · Авито</span>
               </div>
             </div>
+
 
             <div className="sa-transform sa-reveal">
               <div className="sa-mp sa-raw">
