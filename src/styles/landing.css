@@ -452,3 +452,4 @@
 .sa-chart{display:flex;align-items:flex-end;gap:6px;height:80px}
 .sa-bar{flex:1;background:linear-gradient(180deg,#ffd9c7,#ffb191);border-radius:6px 6px 0 0}
 .sa-bar-on{background:linear-gradient(180deg,#ff8a5b,var(--sa-accent));box-shadow:0 8px 20px -8px rgba(255,90,31,.6)}
+.sa-bs .sa-lt{font-size:.5em;font-weight:700;color:#6b6358;letter-spacing:.04em;text-transform:uppercase;vertical-align:.35em;margin-right:2px}
