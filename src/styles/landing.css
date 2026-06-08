@@ -65,54 +65,40 @@
 .sa-hero > .sa-container{position:relative;z-index:2}
 
 /* animated hero background */
-.sa-hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;mask-image:radial-gradient(ellipse 80% 70% at 50% 45%,#000 55%,transparent 95%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 45%,#000 55%,transparent 95%)}
-.sa-hero-grid{position:absolute;inset:-2px;background-image:linear-gradient(rgba(217,70,239,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(217,70,239,.07) 1px,transparent 1px);background-size:48px 48px;animation:saHeroGrid 24s linear infinite;opacity:.55}
-@keyframes saHeroGrid{to{background-position:48px 48px,48px 48px}}
-.sa-hero-orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;mix-blend-mode:multiply}
-.sa-hero-orb-1{width:520px;height:520px;background:radial-gradient(circle,rgba(217,70,239,.45),transparent 70%);top:-160px;left:-80px;animation:saHeroOrb1 18s ease-in-out infinite}
-.sa-hero-orb-2{width:460px;height:460px;background:radial-gradient(circle,rgba(162,28,175,.35),transparent 70%);top:80px;right:-120px;animation:saHeroOrb2 22s ease-in-out infinite}
+.sa-hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;mask-image:radial-gradient(ellipse 85% 75% at 50% 45%,#000 35%,transparent 92%);-webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 45%,#000 35%,transparent 92%)}
+.sa-hero-orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;mix-blend-mode:multiply}
+.sa-hero-orb-1{width:520px;height:520px;background:radial-gradient(circle,rgba(217,70,239,.5),transparent 70%);top:-160px;left:-80px;animation:saHeroOrb1 18s ease-in-out infinite}
+.sa-hero-orb-2{width:460px;height:460px;background:radial-gradient(circle,rgba(162,28,175,.38),transparent 70%);top:80px;right:-120px;animation:saHeroOrb2 22s ease-in-out infinite}
 .sa-hero-orb-3{width:380px;height:380px;background:radial-gradient(circle,rgba(255,180,80,.28),transparent 70%);bottom:-120px;left:35%;animation:saHeroOrb3 26s ease-in-out infinite}
 @keyframes saHeroOrb1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(80px,40px) scale(1.1)}}
 @keyframes saHeroOrb2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-100px,60px) scale(1.08)}}
 @keyframes saHeroOrb3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-50px) scale(1.12)}}
 
-.sa-hero-chip{position:absolute;display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:13px;letter-spacing:.01em;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--sa-line);box-shadow:0 10px 28px -14px rgba(23,19,16,.35);white-space:nowrap;animation:saChipFloat 14s ease-in-out infinite;animation-delay:calc(var(--i) * -1.3s);will-change:transform,opacity;opacity:0}
-.sa-hero-chip-accent{color:var(--sa-accent-2);border-color:rgba(217,70,239,.28);background:rgba(255,235,253,.92)}
-.sa-hero-chip-good{color:#0e7a48;border-color:rgba(31,175,106,.28);background:rgba(225,250,238,.92)}
-.sa-hero-chip-ink{color:var(--sa-ink);border-color:var(--sa-line-strong)}
-.sa-hero-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+/* mini cards drifting in background */
+.sa-hero-card{position:absolute;width:104px;height:128px;border-radius:16px;background:rgba(255,255,255,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--sa-line);box-shadow:0 18px 40px -22px rgba(23,19,16,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;animation:saCardFloat 16s ease-in-out infinite;animation-delay:calc(var(--i) * -1.6s);will-change:transform;opacity:.85;--rot:0deg;transform:rotate(var(--rot))}
+.sa-hero-card svg{width:62%;height:62%;opacity:.85}
+.sa-hero-card-ttl{font-size:9px;font-weight:900;letter-spacing:.08em;color:#1a120c;opacity:.55;margin-bottom:4px}
+.sa-hero-card:nth-child(4){top:8%;left:4%;--rot:-9deg}
+.sa-hero-card:nth-child(5){top:14%;right:6%;--rot:8deg}
+.sa-hero-card:nth-child(6){top:46%;left:2%;--rot:6deg}
+.sa-hero-card:nth-child(7){top:54%;right:3%;--rot:-7deg}
+.sa-hero-card:nth-child(8){top:78%;left:14%;--rot:-4deg;width:92px;height:114px}
+.sa-hero-card:nth-child(9){top:82%;right:16%;--rot:5deg;width:92px;height:114px}
+.sa-hero-card:nth-child(10){top:4%;left:38%;--rot:-6deg;width:84px;height:104px;opacity:.7}
+.sa-hero-card:nth-child(11){top:88%;left:46%;--rot:7deg;width:84px;height:104px;opacity:.7}
+.sa-hero-card:nth-child(12){top:32%;left:18%;--rot:11deg;width:84px;height:104px;opacity:.65}
+.sa-hero-card:nth-child(13){top:38%;right:20%;--rot:-10deg;width:84px;height:104px;opacity:.65}
 
-/* scatter positions for chips (--i 0..11) */
-.sa-hero-chip:nth-child(5){top:14%;left:6%}
-.sa-hero-chip:nth-child(6){top:22%;right:8%}
-.sa-hero-chip:nth-child(7){top:42%;left:3%}
-.sa-hero-chip:nth-child(8){top:58%;right:4%}
-.sa-hero-chip:nth-child(9){top:74%;left:10%}
-.sa-hero-chip:nth-child(10){top:80%;right:12%}
-.sa-hero-chip:nth-child(11){top:8%;left:34%}
-.sa-hero-chip:nth-child(12){top:88%;left:42%}
-.sa-hero-chip:nth-child(13){top:30%;left:14%}
-.sa-hero-chip:nth-child(14){top:50%;right:14%}
-.sa-hero-chip:nth-child(15){top:66%;left:22%}
-.sa-hero-chip:nth-child(16){top:18%;right:22%}
-
-@keyframes saChipFloat{
-  0%{transform:translate(0,12px) scale(.92);opacity:0}
-  12%{opacity:1}
-  50%{transform:translate(0,-14px) scale(1);opacity:1}
-  88%{opacity:1}
-  100%{transform:translate(0,12px) scale(.92);opacity:0}
+@keyframes saCardFloat{
+  0%,100%{transform:rotate(var(--rot)) translateY(0)}
+  50%{transform:rotate(var(--rot)) translateY(-16px)}
 }
 @media(max-width:760px){
-  .sa-hero-chip{font-size:11px;padding:7px 11px}
-  .sa-hero-chip:nth-child(11),
-  .sa-hero-chip:nth-child(12),
-  .sa-hero-chip:nth-child(15),
-  .sa-hero-chip:nth-child(16){display:none}
+  .sa-hero-card{width:74px;height:92px}
+  .sa-hero-card:nth-child(n+10){display:none}
 }
 @media(prefers-reduced-motion:reduce){
-  .sa-hero-chip,.sa-hero-orb,.sa-hero-grid{animation:none}
-  .sa-hero-chip{opacity:1;transform:none}
+  .sa-hero-card,.sa-hero-orb{animation:none}
 }
 
 
