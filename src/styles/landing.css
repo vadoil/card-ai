@@ -125,11 +125,12 @@
 
 /* center product card */
 .sa-mcenter{position:relative;background:linear-gradient(170deg,#fff,#fbf5ef);display:flex;align-items:center;justify-content:center;padding:28px}
-.sa-pcard{position:relative;width:100%;max-width:300px;aspect-ratio:3/4;background:linear-gradient(165deg,#fff,#fff1ea);border-radius:20px;border:1px solid var(--sa-line);overflow:hidden;box-shadow:0 30px 60px -30px rgba(23,19,16,.25)}
-.sa-pcard .sa-pbadge{position:absolute;top:12px;left:12px;background:linear-gradient(100deg,var(--sa-accent),var(--sa-accent-2));color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;padding:5px 10px;border-radius:7px;z-index:3;display:inline-flex;align-items:center;gap:5px;animation:saFadeUp .6s .25s both}
+.sa-pcard{position:relative;width:100%;max-width:260px;aspect-ratio:3/4;background:linear-gradient(165deg,#fff,#fff1ea);border-radius:20px;border:1px solid var(--sa-line);overflow:hidden;box-shadow:0 30px 60px -30px rgba(23,19,16,.25)}
+.sa-pcard .sa-pbadge{position:absolute;top:10px;left:10px;background:linear-gradient(100deg,var(--sa-accent),var(--sa-accent-2));color:#fff;font-size:10px;font-weight:800;letter-spacing:.04em;padding:4px 9px;border-radius:7px;z-index:3;display:inline-flex;align-items:center;gap:5px;animation:saFadeUp .6s .25s both}
 .sa-pcard .sa-pbadge svg{width:11px;height:11px}
-.sa-pcard .sa-pttl{position:absolute;top:42px;left:0;right:0;text-align:center;font-weight:900;font-size:22px;letter-spacing:.04em;color:#1a120c;z-index:2;animation:saFadeUp .6s .35s both}
-.sa-pcard .sa-pinfo{position:absolute;left:12px;top:90px;display:flex;flex-direction:column;gap:7px;z-index:3}
+.sa-pcard .sa-pttl{position:absolute;top:38px;left:0;right:0;text-align:center;font-weight:900;font-size:20px;letter-spacing:.04em;color:#1a120c;z-index:2;animation:saFadeUp .6s .35s both}
+.sa-pcard .sa-pinfo{position:absolute;left:10px;top:74px;display:flex;flex-direction:column;gap:5px;z-index:3}
+.sa-pcard .sa-pinfo .sa-pill{font-size:10.5px;padding:4px 8px}
 .sa-pcard .sa-pinfo .sa-pill{animation:saFadeUp .5s both}
 .sa-pcard .sa-pinfo .sa-pill:nth-child(1){animation-delay:.45s}
 .sa-pcard .sa-pinfo .sa-pill:nth-child(2){animation-delay:.6s}
