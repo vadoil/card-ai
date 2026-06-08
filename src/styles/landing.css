@@ -135,7 +135,7 @@
 .sa-pcard .sa-pinfo .sa-pill:nth-child(2){animation-delay:.6s}
 .sa-pcard .sa-pinfo .sa-pill:nth-child(3){animation-delay:.75s}
 .sa-pcard svg.sa-pim{position:absolute;inset:0;width:100%;height:100%;padding:22%;color:#d9442f;animation:saFadeUp .7s .2s both}
-.sa-pcard .sa-pfoot{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(180deg,transparent,#fff);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--sa-ink);font-weight:700;animation:saFadeUp .6s .9s both}
+.sa-pcard .sa-pfoot{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 12px;background:linear-gradient(180deg,transparent,#fff 35%);display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--sa-ink);font-weight:800;animation:saFadeUp .6s .9s both}
 .sa-pcard .sa-pfoot .sa-rt{display:inline-flex;align-items:center;gap:4px;color:#bd8b3c}
 .sa-pcard .sa-pfoot .sa-rt svg{width:12px;height:12px}
 @keyframes saFadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
