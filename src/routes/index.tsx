@@ -234,30 +234,6 @@ function LandingPage() {
 
         {/* HERO */}
         <section className="sa-hero">
-          <div className="sa-hero-bg" aria-hidden="true">
-            <span className="sa-hero-orb sa-hero-orb-1" />
-            <span className="sa-hero-orb sa-hero-orb-2" />
-            <span className="sa-hero-orb sa-hero-orb-3" />
-            {[
-              { ic: SHIRT, c: "#d946ef", t: "РУБАШКА" },
-              { ic: WATCH, c: "#a21caf", t: "ЧАСЫ" },
-              { ic: BOTTLE, c: "#2f8fd9", t: "ВОДА" },
-              { ic: SHOE, c: "#5a4cd9", t: "КРОССОВКИ" },
-              { ic: BAG, c: "#b13fa0", t: "СУМКА" },
-              { ic: CREAM, c: "#2faf6a", t: "КРЕМ" },
-              { ic: PHONE, c: "#171310", t: "СМАРТФОН" },
-              { ic: BEAR, c: "#e0658a", t: "ИГРУШКА" },
-              { ic: BOTTLE, c: "#bd8b3c", t: "ТЕРМОС" },
-              { ic: SHIRT, c: "#d9442f", t: "ПЛАТЬЕ" },
-            ].map((c, i) => (
-              <span key={i} className="sa-hero-card" style={{ ["--i" as string]: i }}>
-                <span className="sa-hero-card-ttl">{c.t}</span>
-                <svg viewBox="0 0 100 100" fill="none" stroke={c.c} strokeWidth="3" strokeLinejoin="round">
-                  <path d={c.ic} />
-                </svg>
-              </span>
-            ))}
-          </div>
           <div className="sa-container">
             <span className="sa-eyebrow sa-reveal">
               <span className="sa-dot" />
