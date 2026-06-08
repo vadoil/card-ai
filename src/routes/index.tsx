@@ -234,6 +234,51 @@ function LandingPage() {
 
         {/* HERO */}
         <section className="sa-hero">
+          <div className="sa-hero-fx" aria-hidden="true">
+            <svg className="sa-hero-grid" viewBox="0 0 1200 600" preserveAspectRatio="none">
+              <defs>
+                <pattern id="saGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+                  <path d="M60 0H0V60" fill="none" stroke="rgba(23,19,16,.06)" strokeWidth="1" />
+                </pattern>
+                <linearGradient id="saLine" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0%" stopColor="#d946ef" />
+                  <stop offset="100%" stopColor="#a21caf" />
+                </linearGradient>
+                <linearGradient id="saArea" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="rgba(217,70,239,.28)" />
+                  <stop offset="100%" stopColor="rgba(217,70,239,0)" />
+                </linearGradient>
+                <linearGradient id="saBar" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#d946ef" />
+                  <stop offset="100%" stopColor="#a21caf" />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="600" fill="url(#saGrid)" />
+              {/* bars */}
+              <g className="sa-bars">
+                {[80,180,280,380,480,580,680,780,880,980,1080].map((x,i)=>(
+                  <rect key={i} x={x} y={500} width="44" height="0" rx="6" fill="url(#saBar)"
+                    style={{animation:`saBarUp 2.4s cubic-bezier(.2,.7,.2,1) ${i*0.12}s forwards`, ['--h' as any]:`${60+i*22}px`}} />
+                ))}
+              </g>
+              {/* area + line */}
+              <path className="sa-area" d="M0 500 C 150 480, 250 460, 350 430 S 600 360, 750 300 S 1000 200, 1200 120 L 1200 600 L 0 600 Z" fill="url(#saArea)" />
+              <path className="sa-trend" d="M0 500 C 150 480, 250 460, 350 430 S 600 360, 750 300 S 1000 200, 1200 120"
+                fill="none" stroke="url(#saLine)" strokeWidth="3.5" strokeLinecap="round" />
+              {/* moving dot */}
+              <circle className="sa-dot-trail" r="7" fill="#d946ef">
+                <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"
+                  path="M0 500 C 150 480, 250 460, 350 430 S 600 360, 750 300 S 1000 200, 1200 120" />
+              </circle>
+              {/* sparkles */}
+              {[[200,180],[420,260],[640,200],[860,140],[1040,80]].map(([x,y],i)=>(
+                <g key={i} className="sa-spark" style={{animationDelay:`${i*0.7}s`,transformOrigin:`${x}px ${y}px`}}>
+                  <path d={`M${x} ${y-10} L${x+2} ${y-2} L${x+10} ${y} L${x+2} ${y+2} L${x} ${y+10} L${x-2} ${y+2} L${x-10} ${y} L${x-2} ${y-2} Z`} fill="#d946ef" opacity=".75" />
+                </g>
+              ))}
+            </svg>
+            <div className="sa-hero-glow" />
+          </div>
           <div className="sa-container">
             <span className="sa-eyebrow sa-reveal">
               <span className="sa-dot" />
