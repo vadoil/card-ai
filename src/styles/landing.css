@@ -61,7 +61,26 @@
 .sa-nav-cta .sa-login:hover{color:var(--sa-ink)}
 @media(max-width:920px){.sa-nav-links{display:none}.sa-nav-cta .sa-login{display:none}}
 
-.sa-hero{padding:96px 0 64px;text-align:center}
+.sa-hero{padding:96px 0 64px;text-align:center;position:relative;overflow:hidden}
+.sa-hero-fx{position:absolute;inset:0;z-index:0;pointer-events:none;mask-image:radial-gradient(ellipse 80% 70% at 50% 55%,#000 55%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 55%,#000 55%,transparent 100%)}
+.sa-hero-fx .sa-hero-grid{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.sa-hero-glow{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);width:780px;height:520px;background:radial-gradient(closest-side,rgba(217,70,239,.22),rgba(162,28,175,.12) 45%,transparent 75%);filter:blur(20px);animation:saHeroPulse 6s ease-in-out infinite}
+@keyframes saHeroPulse{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(1)}50%{opacity:.9;transform:translate(-50%,-50%) scale(1.06)}}
+@keyframes saBarUp{to{y:calc(500px - var(--h));height:var(--h)}}
+.sa-hero-fx .sa-bars rect{transform-box:fill-box}
+.sa-hero-fx .sa-area{opacity:0;animation:saAreaIn 1.6s ease-out .6s forwards}
+@keyframes saAreaIn{to{opacity:1}}
+.sa-hero-fx .sa-trend{stroke-dasharray:2400;stroke-dashoffset:2400;animation:saTrendDraw 2.6s cubic-bezier(.25,.8,.25,1) .3s forwards, saTrendGlow 3.5s ease-in-out 3s infinite}
+@keyframes saTrendDraw{to{stroke-dashoffset:0}}
+@keyframes saTrendGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(217,70,239,.0))}50%{filter:drop-shadow(0 4px 14px rgba(217,70,239,.6))}}
+.sa-hero-fx .sa-dot-trail{filter:drop-shadow(0 0 10px rgba(217,70,239,.85))}
+.sa-hero-fx .sa-spark{animation:saSpark 2.2s ease-in-out infinite;opacity:0}
+@keyframes saSpark{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(45deg)}}
+.sa-hero > .sa-container{position:relative;z-index:1}
+@media(max-width:680px){.sa-hero-fx{opacity:.55}}
+@media(prefers-reduced-motion:reduce){.sa-hero-fx *{animation:none!important}.sa-hero-fx .sa-trend{stroke-dashoffset:0}.sa-hero-fx .sa-bars rect{y:200px;height:300px}}
+
+
 .sa-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sa-accent);background:rgba(217,70,239,.08);border:1px solid rgba(217,70,239,.2);padding:8px 16px;border-radius:999px;margin-bottom:28px;line-height:1}
 .sa-eyebrow .sa-dot{width:7px;height:7px;border-radius:50%;background:var(--sa-accent);box-shadow:0 0 0 4px rgba(217,70,239,.18)}
 .sa-hero h1{font-size:clamp(36px,6.2vw,68px);font-weight:900;line-height:1.05;letter-spacing:-.02em;max-width:18ch;margin:0 auto 22px}
