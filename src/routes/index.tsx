@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  Upload,
+  Check,
+  Sparkles,
+  ShieldCheck,
+  Layout,
+  Type,
+  Ruler,
+  Star,
+  Wand2,
+} from "lucide-react";
 import "../styles/landing.css";
 
 export const Route = createFileRoute("/")({
