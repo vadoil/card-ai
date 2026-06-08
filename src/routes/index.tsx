@@ -238,23 +238,23 @@ function LandingPage() {
             <span className="sa-hero-orb sa-hero-orb-1" />
             <span className="sa-hero-orb sa-hero-orb-2" />
             <span className="sa-hero-orb sa-hero-orb-3" />
-            <span className="sa-hero-grid" />
             {[
-              { t: "+312% CTR", k: "good" },
-              { t: "×4 варианта", k: "accent" },
-              { t: "−80% времени", k: "good" },
-              { t: "AI-тексты", k: "accent" },
-              { t: "Премиум фон", k: "ink" },
-              { t: "Примерка на модели", k: "accent" },
-              { t: "WB · Ozon · ЯМ · Авито", k: "ink" },
-              { t: "Топ-1 в выдаче", k: "good" },
-              { t: "За 5 минут", k: "accent" },
-              { t: "Без дизайнера", k: "ink" },
-              { t: "+47% к заказам", k: "good" },
-              { t: "Мем · Элит · Инфо", k: "accent" },
+              { ic: SHIRT, c: "#d946ef", t: "РУБАШКА" },
+              { ic: WATCH, c: "#a21caf", t: "ЧАСЫ" },
+              { ic: BOTTLE, c: "#2f8fd9", t: "ВОДА" },
+              { ic: SHOE, c: "#5a4cd9", t: "КРОССОВКИ" },
+              { ic: BAG, c: "#b13fa0", t: "СУМКА" },
+              { ic: CREAM, c: "#2faf6a", t: "КРЕМ" },
+              { ic: PHONE, c: "#171310", t: "СМАРТФОН" },
+              { ic: BEAR, c: "#e0658a", t: "ИГРУШКА" },
+              { ic: BOTTLE, c: "#bd8b3c", t: "ТЕРМОС" },
+              { ic: SHIRT, c: "#d9442f", t: "ПЛАТЬЕ" },
             ].map((c, i) => (
-              <span key={i} className={`sa-hero-chip sa-hero-chip-${c.k}`} style={{ ["--i" as string]: i }}>
-                {c.t}
+              <span key={i} className="sa-hero-card" style={{ ["--i" as string]: i }}>
+                <span className="sa-hero-card-ttl">{c.t}</span>
+                <svg viewBox="0 0 100 100" fill="none" stroke={c.c} strokeWidth="3" strokeLinejoin="round">
+                  <path d={c.ic} />
+                </svg>
               </span>
             ))}
           </div>
