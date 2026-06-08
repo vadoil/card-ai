@@ -866,8 +866,8 @@ function LandingPage() {
                   <b>{fmtRu(designer)}</b>
                 </div>
                 <div className="sa-line">
-                  <span>На Stock AI (тариф «Про»)</span>
-                  <b style={{ color: "var(--sa-accent)" }}>990 ₽</b>
+                  <span>На Stock AI (тариф «Бейсик»)</span>
+                  <b style={{ color: "var(--sa-accent)" }}>1 990 ₽</b>
                 </div>
                 <div className="sa-save">
                   <div className="sa-big">{fmtRu(saved)}</div>
