@@ -981,11 +981,11 @@ function LandingPage() {
         <section className="sa-section">
           <div className="sa-final sa-reveal">
             <h2>
-              Соберите карточку для топа <span className="sa-grad">бесплатно</span>
+              Попробуйте собрать первую карточку <span className="sa-grad">бесплатно</span>
             </h2>
-            <p>Загрузите фото товара — и получите 4 премиум-варианта меньше чем за 5 минут.</p>
-            <a href="#" className="sa-btn sa-btn-primary">
-              Создать карточку →
+            <p>Проверьте, как ваш товар может выглядеть на уровне топовых продавцов.</p>
+            <a href="#pricing" className="sa-btn sa-btn-primary">
+              Создать карточку бесплатно →
             </a>
           </div>
         </section>
