@@ -234,6 +234,30 @@ function LandingPage() {
 
         {/* HERO */}
         <section className="sa-hero">
+          <div className="sa-hero-bg" aria-hidden="true">
+            <span className="sa-hero-orb sa-hero-orb-1" />
+            <span className="sa-hero-orb sa-hero-orb-2" />
+            <span className="sa-hero-orb sa-hero-orb-3" />
+            <span className="sa-hero-grid" />
+            {[
+              { t: "+312% CTR", k: "good" },
+              { t: "×4 варианта", k: "accent" },
+              { t: "−80% времени", k: "good" },
+              { t: "AI-тексты", k: "accent" },
+              { t: "Премиум фон", k: "ink" },
+              { t: "Примерка на модели", k: "accent" },
+              { t: "WB · Ozon · ЯМ · Авито", k: "ink" },
+              { t: "Топ-1 в выдаче", k: "good" },
+              { t: "За 5 минут", k: "accent" },
+              { t: "Без дизайнера", k: "ink" },
+              { t: "+47% к заказам", k: "good" },
+              { t: "Мем · Элит · Инфо", k: "accent" },
+            ].map((c, i) => (
+              <span key={i} className={`sa-hero-chip sa-hero-chip-${c.k}`} style={{ ["--i" as string]: i }}>
+                {c.t}
+              </span>
+            ))}
+          </div>
           <div className="sa-container">
             <span className="sa-eyebrow sa-reveal">
               <span className="sa-dot" />
