@@ -245,103 +245,119 @@ function LandingPage() {
 
         {/* HERO */}
         <section className="sa-hero">
+          <div className="sa-hero-glow" aria-hidden="true" />
           <div className="sa-container">
-            <span className="sa-eyebrow sa-reveal">
-              <span className="sa-dot" />
-              Топ-1 карточки для WB · Ozon · Я.Маркет · Авито
-            </span>
-            <h1 className="sa-reveal">
-              Карточки, которые выводят товар в <span className="sa-grad">топ-1</span>
-            </h1>
-            <p className="sa-lead sa-reveal">
-              Загрузите фото — Stock AI уберёт фон, соберёт премиум-инфографику, тексты и УТП и
-              выдаст 4 варианта карточки, которые кликают и продают. Мемные, элитные, с примеркой
-              на модели — под любую нишу.
-            </p>
-            <div className="sa-hero-cta sa-reveal">
-              <a href="#pricing" className="sa-btn sa-btn-primary">
-                Создать карточку — бесплатно →
-              </a>
-              <a href="#types" className="sa-btn sa-btn-ghost">
-                Посмотреть примеры
-              </a>
-            </div>
-
-            <div className="sa-stats sa-reveal">
-              <div className="sa-s">
-                <b>4 варианта</b>
-                <span>инфо · мем · элит · модель</span>
-              </div>
-              <div className="sa-s">
-                <b>1 клик</b>
-                <span>удаление фона и сборка</span>
-              </div>
-              <div className="sa-s">
-                <b>AI-тексты</b>
-                <span>заголовки, УТП, описание</span>
-              </div>
-              <div className="sa-s">
-                <b>4 площадки</b>
-                <span>WB · Ozon · ЯМ · Авито</span>
-              </div>
-            </div>
-
-
-            <div className="sa-transform sa-reveal">
-              <div className="sa-mp sa-raw">
-                <span className="sa-raw-tag">фото с телефона</span>
-                <div className="sa-ph">
-                  <svg
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    stroke="#8c8276"
-                    strokeWidth="3"
-                    strokeLinejoin="round"
-                  >
-                    <path d={SHIRT} />
-                  </svg>
+            <div className="sa-hero-grid">
+              {/* LEFT */}
+              <div className="sa-hero-left">
+                <span className="sa-eyebrow sa-reveal">
+                  <span className="sa-dot" />
+                  AI-студия карточек для WB · Ozon · Я.Маркет
+                </span>
+                <h1 className="sa-reveal">
+                  Создавайте карточки маркетплейсов, которые выглядят{" "}
+                  <span className="sa-grad">дороже конкурентов</span>
+                </h1>
+                <p className="sa-lead sa-reveal">
+                  Загрузите фото товара — Stock AI соберёт обложку, инфографику, УТП, SEO-текст и
+                  4 варианта дизайна под вашу нишу. Без дизайнера, фотостудии и долгих правок.
+                </p>
+                <div className="sa-bullets sa-reveal">
+                  <span className="sa-b"><Layout strokeWidth={2.2} />Фон и инфографика</span>
+                  <span className="sa-b"><Type strokeWidth={2.2} />Тексты и УТП</span>
+                  <span className="sa-b"><Ruler strokeWidth={2.2} />Размеры под WB/Ozon</span>
                 </div>
-                <div className="sa-foot">
-                  <div className="sa-name">Красная блузка</div>
-                  <div className="sa-meta">исходник · без обработки</div>
+                <div className="sa-hero-cta sa-reveal">
+                  <a href="#pricing" className="sa-btn sa-btn-primary">
+                    Создать карточку бесплатно →
+                  </a>
+                  <a href="#examples" className="sa-btn sa-btn-ghost">
+                    Посмотреть примеры
+                  </a>
+                </div>
+                <div className="sa-trust sa-reveal">
+                  <ShieldCheck strokeWidth={2.2} />
+                  Первые генерации бесплатно · оплата не нужна · результат за несколько минут
                 </div>
               </div>
-              <span className="sa-arrow">→</span>
-              <div className="sa-mp sa-after">
-                <span className="sa-badge">STOCK AI</span>
-                <div className="sa-ph">
-                  <div className="sa-ttl" style={{ fontSize: 30 }}>
-                    РУБАШКА
+
+              {/* RIGHT — product mockup */}
+              <div className="sa-hero-right">
+                <div className="sa-mock-wrap">
+                  <div className="sa-mock">
+                    <div className="sa-mock-top">
+                      <span className="sa-mock-dot r" />
+                      <span className="sa-mock-dot y" />
+                      <span className="sa-mock-dot g" />
+                      <span className="sa-mock-url">app.stock-ai · карточка</span>
+                    </div>
+                    <div className="sa-mock-body">
+                      {/* left panel */}
+                      <aside className="sa-mside">
+                        <div className="sa-mtitle">Загрузить фото</div>
+                        <div className="sa-drop">
+                          <Upload strokeWidth={2} />
+                          Перетащите файл
+                        </div>
+                        <div className="sa-thumb">
+                          <div className="sa-thb">
+                            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"><path d={SHIRT} /></svg>
+                          </div>
+                          <div>
+                            <div className="sa-tn">shirt-01.jpg</div>
+                            <div className="sa-tm">2.4 MB · обработано</div>
+                          </div>
+                        </div>
+                        <span className="sa-status"><Check strokeWidth={3} />Фон удалён</span>
+                      </aside>
+
+                      {/* center — product card */}
+                      <div className="sa-mcenter">
+                        <div className="sa-pcard">
+                          <span className="sa-pbadge"><Check strokeWidth={3} />Готово для WB</span>
+                          <div className="sa-pttl">РУБАШКА</div>
+                          <div className="sa-pinfo">
+                            <span className="sa-pill"><span className="sa-ic">✦</span>100% хлопок</span>
+                            <span className="sa-pill"><span className="sa-ic">↔</span>Размеры 42–54</span>
+                            <span className="sa-pill"><span className="sa-ic">▣</span>Офис и casual</span>
+                          </div>
+                          <svg className="sa-pim" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"><path d={SHIRT} /></svg>
+                          <div className="sa-pfoot">
+                            <span>2 490 ₽</span>
+                            <span className="sa-rt"><Star fill="currentColor" strokeWidth={0} />4.9 · 2 480</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* right panel */}
+                      <aside className="sa-mside right">
+                        <div className="sa-mtitle">Стиль карточки</div>
+                        <div className="sa-styles">
+                          <div className="sa-style s1 on"><span className="sa-sw" />Инфографика</div>
+                          <div className="sa-style s2"><span className="sa-sw" />Premium</div>
+                          <div className="sa-style s3"><span className="sa-sw" />Мемная</div>
+                          <div className="sa-style s4"><span className="sa-sw" />На модели</div>
+                        </div>
+                        <span className="sa-status warm"><Sparkles strokeWidth={2.4} />AI подбирает УТП…</span>
+                        <button className="sa-mbtn"><Wand2 strokeWidth={2.2} />Сгенерировать ещё 4 варианта</button>
+                      </aside>
+                    </div>
                   </div>
-                  <div className="sa-pills">
-                    <span className="sa-pill">
-                      <span className="sa-ic">✦</span>премиум хлопок
-                    </span>
-                    <span className="sa-pill">
-                      <span className="sa-ic">▣</span>классич. воротник
-                    </span>
-                    <span className="sa-pill">
-                      <span className="sa-ic">↔</span>размеры 42–54
-                    </span>
+
+                  {/* 4 variants under */}
+                  <div className="sa-variants" aria-label="Варианты карточек">
+                    <div className="sa-var v1"><span className="sa-vlab">ИНФО</span><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"><path d={SHIRT} /></svg></div>
+                    <div className="sa-var v2"><span className="sa-vlab">PREMIUM</span><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"><path d={SHIRT} /></svg></div>
+                    <div className="sa-var v3"><span className="sa-vlab">LIFESTYLE</span><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"><path d={SHIRT} /></svg></div>
+                    <div className="sa-var v4"><span className="sa-vlab">НА МОДЕЛИ</span><svg viewBox="0 0 100 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round"><circle cx="50" cy="22" r="11" /><path d="M50 33 L50 40 M34 52 q16 -14 32 0 L70 86 L60 86 L58 60 M30 86 L40 86 L42 60 M58 86 L60 110 M42 86 L40 110 M34 52 L24 70 M66 52 L76 70" /></svg></div>
                   </div>
-                  <svg
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    stroke="#d9442f"
-                    strokeWidth="3"
-                    strokeLinejoin="round"
-                  >
-                    <path d={SHIRT} />
-                  </svg>
-                </div>
-                <div className="sa-foot">
-                  <div className="sa-name">Рубашка · премиум-карточка</div>
-                  <div className="sa-meta">4 варианта · готова к WB и Ozon</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+
 
         {/* MARQUEE */}
         <div className="sa-marquee">
