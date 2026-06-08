@@ -229,6 +229,7 @@ function LandingPage() {
                 <a href="#how">Как работает</a>
                 <a href="#types">Типы карточек</a>
                 <a href="#pricing">Тарифы</a>
+                <Link to="/studio">Студия</Link>
                 <a href="#faq">FAQ</a>
               </div>
               <div className="sa-nav-cta">
